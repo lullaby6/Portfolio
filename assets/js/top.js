@@ -1,21 +1,22 @@
-const toTop = document.querySelector('#to-top')
+const topButton = document.querySelector('#top')
 
-toTop.addEventListener('click', () => window.scrollTo(0, 0))
+topButton.addEventListener('click', () => window.scrollTo(0, 0))
 
 window.addEventListener('scroll', e => {
+
     if(window.scrollY > 0){
-        if(window.getComputedStyle(toTop).getPropertyValue("opacity") == 0){
-            toTop.animate([
+        if(window.getComputedStyle(topButton).getPropertyValue("opacity") == 0){
+            topButton.animate([
                 {opacity: "0"},
                 {opacity: "1"}
             ],{
-                duration: 250,
+                duration: 500,
                 fill: 'forwards'
             })
         }
     }else{
-        if(window.getComputedStyle(toTop).getPropertyValue("opacity") == 1){
-            toTop.animate([
+        if(window.getComputedStyle(topButton).getPropertyValue("opacity") == 1){
+            topButton.animate([
                 {opacity: "1"},
                 {opacity: "0"}
             ],{
@@ -24,4 +25,5 @@ window.addEventListener('scroll', e => {
             })
         }
     }
+
 })
