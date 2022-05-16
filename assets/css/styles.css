@@ -297,7 +297,7 @@ main svg {
 @media screen and (max-width: 675px) {
   header {
     justify-content: start;
-    padding: 5px 50px;
+    padding: 5px 25px;
   }
   header a {
     display: none;
