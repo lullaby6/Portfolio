@@ -2,6 +2,7 @@
 html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
@@ -15,6 +16,7 @@ header {
   gap: 25px;
   font-size: 17.5px;
   padding: 25px 100px;
+  z-index: 1;
 }
 header a {
   text-decoration: none;
@@ -37,13 +39,17 @@ header a:hover::before {
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
+  text-align: center;
+  justify-content: space-around;
   height: calc(100vh - 75px);
 }
 main div {
   position: relative;
   bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 main div h1 {
   color: #171a21;
@@ -75,15 +81,17 @@ main div h2 {
 }
 main svg {
   width: 500px;
-  height: 500px;
+  height: auto;
 }
 
 #about {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 125px;
+  justify-content: space-evenly;
+  gap: 25px;
+  width: 100%;
+  overflow: hidden;
   background: #ebebeb;
 }
 #about h1 {
@@ -91,10 +99,16 @@ main svg {
   font-size: 50px;
   margin: 0;
   cursor: pointer;
+  white-space: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 #about h1:hover {
   transform: translateX(17.5px);
+}
+@media screen and (max-width: 650px) {
+  #about {
+    flex-direction: column;
+  }
 }
 #about p {
   max-width: 500px;
@@ -112,18 +126,26 @@ main svg {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 125px;
+  justify-content: space-evenly;
+  gap: 25px;
+  width: 100%;
+  overflow: hidden;
 }
 #projects h1 {
   color: #171a21;
   font-size: 50px;
   margin: 0;
   cursor: pointer;
+  white-space: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 #projects h1:hover {
   transform: translateX(17.5px);
+}
+@media screen and (max-width: 650px) {
+  #projects {
+    flex-direction: column;
+  }
 }
 #projects p {
   max-width: 500px;
@@ -141,8 +163,10 @@ main svg {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 125px;
+  justify-content: space-evenly;
+  gap: 25px;
+  width: 100%;
+  overflow: hidden;
   background: #ebebeb;
 }
 #skills h1 {
@@ -150,10 +174,16 @@ main svg {
   font-size: 50px;
   margin: 0;
   cursor: pointer;
+  white-space: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 #skills h1:hover {
   transform: translateX(17.5px);
+}
+@media screen and (max-width: 650px) {
+  #skills {
+    flex-direction: column;
+  }
 }
 #skills div {
   display: flex;
@@ -186,8 +216,10 @@ main svg {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 125px;
+  justify-content: space-evenly;
+  gap: 25px;
+  width: 100%;
+  overflow: hidden;
   background: #171a21;
 }
 #contact h1 {
@@ -195,10 +227,16 @@ main svg {
   font-size: 50px;
   margin: 0;
   cursor: pointer;
+  white-space: nowrap;
   transition: transform 0.3s ease-in-out;
 }
 #contact h1:hover {
   transform: translateX(17.5px);
+}
+@media screen and (max-width: 650px) {
+  #contact {
+    flex-direction: column;
+  }
 }
 #contact h1 {
   color: #fff;
@@ -227,6 +265,27 @@ main svg {
 #contact div a:hover {
   color: #fff;
   background: #171a21;
+}
+
+@media screen and (max-width: 1090px) {
+  header {
+    justify-content: center;
+    padding: 25px;
+  }
+
+  main {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  main svg {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 780px) {
+  #contact div {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
