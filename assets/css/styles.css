@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 25px;
+  font-size: 17.5px;
+  padding: 25px 100px;
+}
+header a {
+  text-decoration: none;
+  color: #617073;
+  position: relative;
+}
+header a::before {
+  content: "";
+  position: absolute;
+  height: 2.25px;
+  bottom: 0;
+  background: #617073;
+  width: 0;
+  transition: width 0.5s;
+}
+header a:hover::before {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  height: calc(100vh - 75px);
+}
+main div {
+  position: relative;
+  bottom: 50px;
+}
+main div h1 {
+  color: #171a21;
+  font-size: 75px;
+  margin: 0;
+}
+main div h2 {
+  color: #617073;
+  font-size: 25px;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 21.5ch;
+  animation: typing 2.5s steps(21), blink 0.5s step-end infinite;
+  overflow: hidden;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #617073;
+  }
+}
+main svg {
+  width: 500px;
+  height: 500px;
+}
+
+#about {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+  background: #ebebeb;
+}
+#about h1 {
+  color: #171a21;
+  font-size: 50px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#about h1:hover {
+  transform: translateX(17.5px);
+}
+#about p {
+  max-width: 500px;
+  font-size: 20px;
+  color: #fff;
+  background: #171a21;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#projects {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+}
+#projects h1 {
+  color: #171a21;
+  font-size: 50px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#projects h1:hover {
+  transform: translateX(17.5px);
+}
+#projects p {
+  max-width: 500px;
+  font-size: 20px;
+  color: #fff;
+  background: #171a21;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#skills {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+  background: #ebebeb;
+}
+#skills h1 {
+  color: #171a21;
+  font-size: 50px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#skills h1:hover {
+  transform: translateX(17.5px);
+}
+#skills div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#skills div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+#skills div ul li {
+  max-width: 500px;
+  font-size: 20px;
+  color: #fff;
+  background: #171a21;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#contact {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 125px;
+  background: #171a21;
+}
+#contact h1 {
+  color: #171a21;
+  font-size: 50px;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#contact h1:hover {
+  transform: translateX(17.5px);
+}
+#contact h1 {
+  color: #fff;
+  font-weight: 100;
+}
+#contact div {
+  display: flex;
+  gap: 50px;
+}
+#contact div a {
+  background: #fff;
+  color: #171a21;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease-in-out;
+}
+#contact div a:hover {
+  color: #fff;
+  background: #171a21;
+}
+
+/*# sourceMappingURL=styles.css.map */
