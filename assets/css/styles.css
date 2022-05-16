@@ -35,6 +35,13 @@ header a::before {
 header a:hover::before {
   width: 100%;
 }
+header i {
+  position: absolute;
+  visibility: hidden;
+  color: #617073;
+  display: none;
+  font-size: 50px;
+}
 
 main {
   display: flex;
@@ -105,7 +112,7 @@ main svg {
 #about h1:hover {
   transform: translateX(17.5px);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 675px) {
   #about {
     flex-direction: column;
   }
@@ -142,7 +149,7 @@ main svg {
 #projects h1:hover {
   transform: translateX(17.5px);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 675px) {
   #projects {
     flex-direction: column;
   }
@@ -180,7 +187,7 @@ main svg {
 #skills h1:hover {
   transform: translateX(17.5px);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 675px) {
   #skills {
     flex-direction: column;
   }
@@ -233,7 +240,7 @@ main svg {
 #contact h1:hover {
   transform: translateX(17.5px);
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 675px) {
   #contact {
     flex-direction: column;
   }
@@ -285,6 +292,19 @@ main svg {
 @media screen and (max-width: 780px) {
   #contact div {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 675px) {
+  header {
+    justify-content: start;
+    padding: 5px 50px;
+  }
+  header a {
+    display: none;
+  }
+  header i {
+    position: relative;
+    visibility: visible;
   }
 }
 
