@@ -36,8 +36,6 @@ window.addEventListener('scroll', e => {
         }
     }else{
         //scrolling down
-        hideMobileNav()
-
         if(header.state == 'visible'){
             header.animate([
                 {transform: "translateY(0)"},
