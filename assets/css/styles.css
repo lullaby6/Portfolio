@@ -106,10 +106,10 @@ main svg {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
   background: #ebebeb;
 }
 #about h1 {
@@ -118,10 +118,34 @@ main svg {
   margin: 0;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.3s ease-in-out;
+  width: 40%;
 }
-#about h1:hover {
-  transform: translateX(17.5px);
+#about h1 span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+#about h1 span:hover {
+  left: 17.5px;
+}
+@media screen and (max-width: 815px) {
+  #about h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#about .second {
+  width: 40%;
+}
+@media screen and (max-width: 815px) {
+  #about .second {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 815px) {
+  #about {
+    gap: 25px;
+  }
 }
 @media screen and (max-width: 675px) {
   #about {
@@ -144,10 +168,10 @@ main svg {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 #projects h1 {
   color: #171a21;
@@ -155,10 +179,34 @@ main svg {
   margin: 0;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.3s ease-in-out;
+  width: 40%;
 }
-#projects h1:hover {
-  transform: translateX(17.5px);
+#projects h1 span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+#projects h1 span:hover {
+  left: 17.5px;
+}
+@media screen and (max-width: 815px) {
+  #projects h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#projects .second {
+  width: 40%;
+}
+@media screen and (max-width: 815px) {
+  #projects .second {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 815px) {
+  #projects {
+    gap: 25px;
+  }
 }
 @media screen and (max-width: 675px) {
   #projects {
@@ -175,16 +223,17 @@ main svg {
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 #skills {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
   background: #ebebeb;
 }
 #skills h1 {
@@ -193,10 +242,34 @@ main svg {
   margin: 0;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.3s ease-in-out;
+  width: 40%;
 }
-#skills h1:hover {
-  transform: translateX(17.5px);
+#skills h1 span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+#skills h1 span:hover {
+  left: 17.5px;
+}
+@media screen and (max-width: 815px) {
+  #skills h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#skills .second {
+  width: 40%;
+}
+@media screen and (max-width: 815px) {
+  #skills .second {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 815px) {
+  #skills {
+    gap: 25px;
+  }
 }
 @media screen and (max-width: 675px) {
   #skills {
@@ -225,19 +298,16 @@ main svg {
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
   font-size: 15px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 #contact {
   padding: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
   background: #171a21;
 }
 #contact h1 {
@@ -246,10 +316,34 @@ main svg {
   margin: 0;
   cursor: pointer;
   white-space: nowrap;
-  transition: transform 0.3s ease-in-out;
+  width: 40%;
 }
-#contact h1:hover {
-  transform: translateX(17.5px);
+#contact h1 span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+#contact h1 span:hover {
+  left: 17.5px;
+}
+@media screen and (max-width: 815px) {
+  #contact h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#contact .second {
+  width: 40%;
+}
+@media screen and (max-width: 815px) {
+  #contact .second {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 815px) {
+  #contact {
+    gap: 25px;
+  }
 }
 @media screen and (max-width: 675px) {
   #contact {
