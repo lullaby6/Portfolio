@@ -13,7 +13,6 @@
 html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 header {
@@ -146,7 +145,7 @@ main svg {
   }
   #about h1 {
     padding-left: 0;
-    width: 100vw;
+    width: auto;
     text-align: center;
   }
 }
@@ -196,7 +195,7 @@ main svg {
   }
   #projects h1 {
     padding-left: 0;
-    width: 100vw;
+    width: auto;
     text-align: center;
   }
 }
@@ -248,7 +247,7 @@ main svg {
   }
   #skills h1 {
     padding-left: 0;
-    width: 100vw;
+    width: auto;
     text-align: center;
   }
 }
@@ -311,7 +310,7 @@ main svg {
   }
   #contact h1 {
     padding-left: 0;
-    width: 100vw;
+    width: auto;
     text-align: center;
   }
 }

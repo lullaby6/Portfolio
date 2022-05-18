@@ -12,7 +12,6 @@ const addEffect = {
 
     scrollin: (el, mode, time = 1000) => {
         time = Number(time)
-        el.style.position = 'relative'
         el.scrollin = false
         window.addEventListener('scroll', e => {
             const dis = Math.abs(window.scrollY + window.innerHeight - el.offsetTop)
@@ -29,8 +28,8 @@ const addEffect = {
                         break
                     case 'left':
                         el.animate([
-                            {left: `${el.offsetLeft - window.innerWidth}px`},
-                            {left: "0"}
+                            {transform: `translateX(${- window.innerWidth}px)`},
+                            {transform: "translateX(0)"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -38,8 +37,8 @@ const addEffect = {
                         break
                     case 'right':
                         el.animate([
-                            {left: `${el.offsetLeft + window.innerWidth}px`},
-                            {left: "0"}
+                            {transform: `translateX(${+ window.innerWidth}px)`},
+                            {transform: "translateX(0)"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -47,8 +46,8 @@ const addEffect = {
                         break
                     case 'bottom':
                         el.animate([
-                            {top: `${el.offsetTop + window.innerHeight}px`},
-                            {top: "0"}
+                            {transform: `translateY(${+ window.innerHeight}px)`},
+                            {transform: "translateY(0)"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -56,8 +55,8 @@ const addEffect = {
                         break
                     case 'up':
                         el.animate([
-                            {top: `${el.offsetTop - window.innerHeight}px`},
-                            {top: "0"}
+                            {transform: `translateY(${- window.innerHeight}px)`},
+                            {transform: "translateY(0)"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
