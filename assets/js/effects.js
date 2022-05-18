@@ -10,8 +10,9 @@ const addEffect = {
         })
     },
 
-    scrollin: (el, mode, time = 1000) => {
+    scrollin: (el, mode, time = 1000, offset = 1) => {
         time = Number(time)
+        offset = Number(offset)
         el.scrollin = false
         window.addEventListener('scroll', e => {
             const dis = Math.abs(window.scrollY + window.innerHeight - el.offsetTop)
@@ -28,7 +29,7 @@ const addEffect = {
                         break
                     case 'left':
                         el.animate([
-                            {transform: `translateX(${- window.innerWidth}px)`},
+                            {transform: `translateX(${- window.innerWidth * offset}px)`},
                             {transform: "translateX(0)"}
                         ],{
                             duration: time,
@@ -37,7 +38,7 @@ const addEffect = {
                         break
                     case 'right':
                         el.animate([
-                            {transform: `translateX(${+ window.innerWidth}px)`},
+                            {transform: `translateX(${+ window.innerWidth * offset}px)`},
                             {transform: "translateX(0)"}
                         ],{
                             duration: time,
@@ -46,7 +47,7 @@ const addEffect = {
                         break
                     case 'bottom':
                         el.animate([
-                            {transform: `translateY(${+ window.innerHeight}px)`},
+                            {transform: `translateY(${+ window.innerHeight * offset}px)`},
                             {transform: "translateY(0)"}
                         ],{
                             duration: time,
@@ -55,7 +56,7 @@ const addEffect = {
                         break
                     case 'up':
                         el.animate([
-                            {transform: `translateY(${- window.innerHeight}px)`},
+                            {transform: `translateY(${- window.innerHeight * offset}px)`},
                             {transform: "translateY(0)"}
                         ],{
                             duration: time,
