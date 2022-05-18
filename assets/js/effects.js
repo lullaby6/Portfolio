@@ -10,9 +10,9 @@ const addEffect = {
         })
     },
 
-    scrollin: (el, mode, time = 1000, offset = 100) => {
+    scrollin: (el, mode, time = 1000) => {
         time = Number(time)
-        offset = Number(offset)
+        el.style.position = 'relative'
         el.scrollin = false
         window.addEventListener('scroll', e => {
             const dis = Math.abs(window.scrollY + window.innerHeight - el.offsetTop)
@@ -29,8 +29,8 @@ const addEffect = {
                         break
                     case 'left':
                         el.animate([
-                            {transform: `translateX(-${offset}%)`},
-                            {transform: "translateX(0)"}
+                            {left: `${el.offsetLeft - window.innerWidth}px`},
+                            {left: "0"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -38,8 +38,8 @@ const addEffect = {
                         break
                     case 'right':
                         el.animate([
-                            {transform: `translateX(+${offset}%)`},
-                            {transform: "translateX(0)"}
+                            {left: `${el.offsetLeft + window.innerWidth}px`},
+                            {left: "0"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -47,8 +47,8 @@ const addEffect = {
                         break
                     case 'bottom':
                         el.animate([
-                            {transform: `translateY(+${offset}%)`},
-                            {transform: "translateY(0)"}
+                            {top: `${el.offsetTop + window.innerHeight}px`},
+                            {top: "0"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
@@ -56,8 +56,8 @@ const addEffect = {
                         break
                     case 'up':
                         el.animate([
-                            {transform: `translateY(-${offset}%)`},
-                            {transform: "translateY(0)"}
+                            {top: `${el.offsetTop - window.innerHeight}px`},
+                            {top: "0"}
                         ],{
                             duration: time,
                             easing: 'ease-in-out'
