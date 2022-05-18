@@ -13,6 +13,7 @@
 html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
@@ -26,7 +27,7 @@ header {
   gap: 25px;
   font-size: 17.5px;
   padding: 25px 100px;
-  z-index: 1;
+  z-index: 10;
 }
 header #normal-nav {
   display: flex;
@@ -35,6 +36,7 @@ header #normal-nav {
 header #normal-nav a {
   text-decoration: none;
   color: #617073;
+  cursor: pointer;
   position: relative;
 }
 header #normal-nav a::before {
@@ -65,6 +67,7 @@ main {
   align-items: center;
   text-align: center;
   justify-content: space-around;
+  background: #fff;
   height: calc(100vh - 75px);
 }
 main div {
@@ -115,7 +118,7 @@ main svg {
   justify-content: center;
   width: 100%;
   gap: 5%;
-  overflow: hidden;
+  background: #fff;
   background: #ebebeb;
 }
 #about h1 {
@@ -166,7 +169,7 @@ main svg {
   justify-content: center;
   width: 100%;
   gap: 5%;
-  overflow: hidden;
+  background: #fff;
 }
 #projects h1 {
   color: #171a21;
@@ -217,7 +220,7 @@ main svg {
   justify-content: center;
   width: 100%;
   gap: 5%;
-  overflow: hidden;
+  background: #fff;
   background: #ebebeb;
 }
 #skills h1 {
@@ -280,7 +283,7 @@ main svg {
   justify-content: center;
   width: 100%;
   gap: 5%;
-  overflow: hidden;
+  background: #fff;
   background: #171a21;
 }
 #contact h1 {
