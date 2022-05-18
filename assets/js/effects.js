@@ -2,7 +2,7 @@ const addEffect = {
 
     scrollto: (el, to) => {
         el.addEventListener('click', e => {
-            document.querySelector(`#${to}`).scrollIntoView({
+                document.querySelector(`#${to}`).scrollIntoView({
                 behavior: 'auto',
                 block: 'center',
                 inline: 'center'
