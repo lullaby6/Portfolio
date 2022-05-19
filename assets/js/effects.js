@@ -10,13 +10,13 @@ const addEffect = {
         })
     },
 
-    scrollin: (el, mode, time = 1000, offset = 1) => {
+    scrollin: (el, mode, time = 1000, offset = 1, aprox = 75) => {
         time = Number(time)
         offset = Number(offset)
         el.scrollin = false
         window.addEventListener('scroll', e => {
-            const dis = Math.abs(window.scrollY + window.innerHeight - el.offsetTop)
-            if(!el.scrollin && dis < 100){
+            const dis = Math.abs(window.scrollY + window.innerHeight - (el.parentNode.offsetTop + el.offsetTop))
+            if(!el.scrollin && dis < aprox){
                 switch(mode) {
                     case 'fade':
                         el.animate([
@@ -72,6 +72,7 @@ const addEffect = {
 }
 
 document.querySelectorAll("[effect]").forEach(el => {
+    console.log(el);
 	let effects = el.getAttribute("effect").split(" ")
     effects = effects.filter(effect => effect.trim() !== '')
 	effects.forEach(effect => {

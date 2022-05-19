@@ -78,7 +78,7 @@ main div {
   bottom: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   text-align: center;
 }
 main div h1 {
@@ -161,9 +161,8 @@ main svg {
   background: #171a21;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7.5px 7.5px 0px rgba(125, 125, 125, 0.375);
+  line-height: 1.25;
 }
 
 #projects {
@@ -212,9 +211,8 @@ main svg {
   background: #171a21;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7.5px 7.5px 0px rgba(125, 125, 125, 0.375);
+  line-height: 1.25;
   text-align: center;
 }
 
@@ -276,9 +274,8 @@ main svg {
   background: #171a21;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7.5px 7.5px 0px rgba(125, 125, 125, 0.375);
+  line-height: 1.25;
   font-size: 15px;
 }
 
@@ -333,9 +330,7 @@ main svg {
 #contact div a {
   background: #fff;
   color: #171a21;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7.5px 7.5px 0px rgba(10, 10, 10, 0.25);
   text-decoration: none;
   font-size: 20px;
   padding: 15px;
@@ -361,6 +356,9 @@ main svg {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+  }
+  main div {
+    align-items: center;
   }
   main svg {
     width: 75%;
