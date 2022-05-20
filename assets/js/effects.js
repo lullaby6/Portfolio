@@ -72,7 +72,7 @@ const addEffect = {
 }
 
 document.querySelectorAll("[effect]").forEach(el => {
-    console.log(el);
+    //console.log(el);
 	let effects = el.getAttribute("effect").split(" ")
     effects = effects.filter(effect => effect.trim() !== '')
 	effects.forEach(effect => {
