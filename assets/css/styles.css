@@ -354,7 +354,6 @@ main svg {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: auto;
     padding: 50px 12.5%;
   }
   main div {
