@@ -44,7 +44,7 @@ header {
   justify-content: end;
   gap: 25px;
   font-size: 17.5px;
-  padding: 25px 125px;
+  padding: 25px 12.5%;
   z-index: 10;
 }
 header #normal-nav {
@@ -163,7 +163,6 @@ main svg {
     gap: 25px;
   }
   #about h1 {
-    padding-left: 0;
     width: auto;
     text-align: center;
   }
@@ -209,7 +208,6 @@ main svg {
     gap: 25px;
   }
   #projects h1 {
-    padding-left: 0;
     width: auto;
     text-align: center;
   }
@@ -257,7 +255,6 @@ main svg {
     gap: 25px;
   }
   #skills h1 {
-    padding-left: 0;
     width: auto;
     text-align: center;
   }
@@ -316,7 +313,6 @@ main svg {
     gap: 25px;
   }
   #contact h1 {
-    padding-left: 0;
     width: auto;
     text-align: center;
   }
@@ -390,12 +386,12 @@ main svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
     font-size: 50px;
     top: 100%;
-    min-height: 50vh;
     width: 100%;
+    height: auto;
+    padding: 25px;
+    gap: 15px;
     transform: translateX(-100%);
   }
   header #mobile-nav a {
