@@ -85,7 +85,7 @@ main {
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 0 12.5%;
   background: #fff;
   height: calc(100vh - 75px);
 }
@@ -136,7 +136,7 @@ main svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 10%;
+  padding: 100px 12.5%;
   width: 100%;
   background: #fff;
   position: relative;
@@ -183,7 +183,7 @@ main svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 10%;
+  padding: 100px 12.5%;
   width: 100%;
   background: #fff;
   position: relative;
@@ -230,7 +230,7 @@ main svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 10%;
+  padding: 100px 12.5%;
   width: 100%;
   background: #fff;
   position: relative;
@@ -289,7 +289,7 @@ main svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 10%;
+  padding: 100px 12.5%;
   width: 100%;
   background: #fff;
   position: relative;
@@ -359,7 +359,7 @@ main svg {
     text-align: center;
     justify-content: center;
     height: auto;
-    padding: 50px 10%;
+    padding: 50px 12.5%;
   }
   main div {
     align-items: center;
