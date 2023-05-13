@@ -4,94 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luciano Brumer Porfolio</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Luciano Brumer's Portfolio</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/libs/normalize.css">
+
+    <script src="./assets/libs/iconify-icon.min.js" defer></script>
+    <script src="./assets/js/scroll-momentum.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
-
-    <header id="header">
-
-            <nav id="normal-nav">
-                <a effect="scrollto-about">aboutMe()</a>
-                <a effect="scrollto-projects">projects()</a>
-                <a effect="scrollto-skills">skills()</a>
-                <a effect="scrollto-contact">contact()</a>
-            </nav>
-
-            <i id="mobile-button" class='bx bx-menu'></i>
-
-            <nav id="mobile-nav">
-                <a effect="scrollto-about">aboutMe()</a>
-                <a effect="scrollto-projects">projects()</a>
-                <a effect="scrollto-skills">skills()</a>
-                <a effect="scrollto-contact">contact()</a>
-            </nav>
-
-    </header>
-
-    <main>
-        <div>
-            <h1 id="home">Luciano <br>Brumer</h1>
-            <h2>a Full-Stack Developer.</h2>
+    <div id="cursor"></div>
+    <div id="nav-c">
+        <iconify-icon id="nav-icon" icon="material-symbols:menu" width="35" height="35"></iconify-icon>
+        <nav>
+            <div><a>HOME</a></div>
+            <div><a>PROJECTS</a></div>
+            <div><a>SKILLS</a></div>
+            <div><a>CONTACT</a></div>
+        </nav>
+    </div>
+    <section id="main">
+        <div class="hero-c">
+            <div class="me">
+                <div class="hero">
+                    <p>hi! i am </p>
+                    <h1>Luciano Brumer</h1>
+                </div>
+                <p class="about type">a software developer.</p>
+            </div>
+            <!-- <div class="projects-c"><a class="projects">My Projects</a></div> -->
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 10 9" shape-rendering="crispEdges">
-            <metadata>Made with Pixels to Svg https://codepen.io/shshaw/pen/XbxvNj</metadata>
-            <path stroke="#fbf236" d="M1 0h1M5 0h1M2 1h1M6 1h1M2 2h1M6 2h1M2 3h1M6 3h1M2 4h1M6 4h1M2 5h1M6 5h1M2 6h1M6 6h1M2 7h1M6 7h1M3 8h1M7 8h1" />
-            <path stroke="#76428a" d="M3 0h1M7 0h1M0 1h1M4 1h1M8 1h1M0 2h1M4 2h1M8 2h1M0 3h1M4 3h1M8 3h1M0 4h1M4 4h1M8 4h1M0 5h1M4 5h1M8 5h1M0 6h1M4 6h1M8 6h1M0 7h1M4 7h1M8 7h1M1 8h1M5 8h1M9 8h1" />
-        </svg>
-    </main>
-
-    <section id="about">
-        <h1 effect="scrollin-left-1000-0.3">aboutMe => </h1>
-        <p effect="scrollin-left-1000-0.3" class="second">
-            Hello, I'm from Buenos Aires, Argentina and I love programming! <br>
-            Every day I learn something new, I never stop studying.
-        </p>
     </section>
-
     <section id="projects">
-        <h1 effect="scrollin-left-1000-0.3">projects => </h1>
-        <p effect="scrollin-left-1000-0.3" class="second">
-            404
-        </p>
-    </section>
 
+    </section>
     <section id="skills">
-        <h1 effect="scrollin-left-1000-0.3">skills => </h1>
 
-        <div effect="scrollin-left-1000-0.3" class="second">
-            <ul>
-                <li>HTML, Pug</li>
-                <li>CSS, Sass, Tailwind</li>
-                <li>JavaScript, React, Lit</li>
-            </ul>
-
-            <ul>
-                <li>Express.js (API Rest), PHP</li>
-                <li>MySQL, MongoDB, PostgreSQL</li>
-                <li>Git, Github, Docker</li>
-            </ul>
-        </div>
     </section>
+    <section id="contact">
 
-    <footer id="contact">
-        <h1 effect="scrollin-left-1000-0.3">contact => </h1>
-
-        <div effect="scrollin-left-1000-0.3" class="second">
-            <a target="_blank" href="mailto:lucianobrumer5@gmail.com?Subject=Hello Luciano Brumer!"><i class='bx bx-envelope' ></i>Email</a>
-            <a target="_blank" href="https://www.linkedin.com/in/luciano-brumer/"><i class='bx bxl-linkedin-square' ></i>Linkedin</a>
-            <a target="_blank" href="https://github.com/LucianoBrumer"><i class='bx bxl-github'></i>Github</a>
-        </div>
-    </footer>
-
-    <i id='top' class='bx bxs-chevron-up'></i>
-
-    <script src="assets/js/top.js"></script>
-    <script src="assets/js/header.js"></script>
-    <script src="assets/js/mobile-nav.js"></script>
-    <script src="assets/js/effects.js"></script>
-
+    </section>
 </body>
 </html>
