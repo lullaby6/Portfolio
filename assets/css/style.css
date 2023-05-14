@@ -255,9 +255,9 @@ section#main .hero-c .projects:hover {
 }
 
 #projects {
-    background-color: #222238;
+    background-color: var(--bm);
 }
 
 #contact {
-    background-color: #222238;
+    background-color: var(--bm);
 }
