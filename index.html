@@ -11,18 +11,21 @@
     <link rel="stylesheet" href="./assets/libs/normalize.css">
 
     <script src="./assets/libs/iconify-icon.min.js" defer></script>
-    <script src="./assets/js/scroll-momentum.js" defer></script>
+    <!-- <script src="./assets/js/scroll-momentum.js" defer></script> -->
+    <script src="./assets/js/scroll-to.js" defer></script>
+    <script src="./assets/js/scroll-reveal.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
     <div id="cursor"></div>
+    <iconify-icon id="scroll-top" icon="material-symbols:arrow-back-ios-new" rotate="90deg" width="30"></iconify-icon>
     <div id="nav-c">
         <iconify-icon id="nav-icon" icon="material-symbols:menu" width="35" height="35"></iconify-icon>
         <nav>
-            <div><a>HOME</a></div>
-            <div><a>PROJECTS</a></div>
-            <div><a>SKILLS</a></div>
-            <div><a>CONTACT</a></div>
+            <div><a scroll-to="#main">HOME</a></div>
+            <div><a scroll-to="#projects">PROJECTS</a></div>
+            <div><a scroll-to="#skills">SKILLS</a></div>
+            <div><a scroll-to="#contact">CONTACT</a></div>
         </nav>
     </div>
     <section id="main">
@@ -37,14 +40,14 @@
             <!-- <div class="projects-c"><a class="projects">My Projects</a></div> -->
         </div>
     </section>
-    <section id="projects">
-
+    <section id="projects" class="section">
+        <h1 class="title scroll-reveal" onetime fade duration="750" distance="50">PROJECTS</h1>
     </section>
-    <section id="skills">
-
+    <section id="skills" class="section">
+        <h1 class="title scroll-reveal" onetime fade duration="750" distance="50">SKILLS</h1>
     </section>
-    <section id="contact">
-
+    <section id="contact" class="section">
+        <h1 class="title scroll-reveal" onetime fade duration="750" distance="50">CONTACT</h1>
     </section>
 </body>
 </html>

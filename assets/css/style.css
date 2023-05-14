@@ -17,6 +17,7 @@
 
 html {
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -34,26 +35,6 @@ html {
     background-color: var(--bs);
 }
 
-@keyframes fade {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes reveal {
-    from {
-        opacity: 0;
-        width: 0;
-    }
-    to {
-        opacity: 1;
-        width: 100%;
-    }
-}
-
 .ani-reveal {
     display: flex;
     animation-name: reveal;
@@ -62,17 +43,21 @@ html {
     animation-composition: ease-in-out;
 }
 
-@keyframes hide {
-    from {
-        opacity: 1;
-        width: 100%;
-    }
-    to {
-        opacity: 0;
-        width: 0;
-    }
+#scroll-top {
+    color: var(--text);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
+    opacity: .25;
+    display: none;
+    z-index: 100;
 }
 
+#scroll-top:hover {
+    opacity: 1 !important;
+}
 
 #cursor {
     width: 15px;
@@ -97,6 +82,8 @@ html {
     margin: 12.5px;
 
     display: flex;
+
+    z-index: 100;
 }
 
 #nav-icon {
@@ -256,4 +243,21 @@ section#main .hero-c .projects:hover {
     overflow-wrap: break-word;
     font-family: 'webfont-monospace', monospace;
     border-right: 3px solid var(--text);
+}
+
+.section {
+    padding: 100px;
+}
+
+.section h1 {
+    font-size: 50px;
+    color: var(--text);
+}
+
+#projects {
+    background-color: #222238;
+}
+
+#contact {
+    background-color: #222238;
 }

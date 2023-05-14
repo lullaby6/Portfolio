@@ -1,5 +1,5 @@
-const momentumStrength = 0.2;
-const momentumDragPercent = 0.002;
+const momentumStrength = 0.05;
+const momentumDragPercent = 0.0075;
 let scrollMomentumSpeed = 0;
 let scrollPosition = window.scrollY;
 let momentumScrollInProgress = false;

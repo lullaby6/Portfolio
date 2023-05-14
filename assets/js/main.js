@@ -20,6 +20,34 @@ window.addEventListener('mousemove', event => {
             fill: 'forwards',
         }
     )
+
+    const cursorStyle = window.getComputedStyle(event.target).cursor
+
+    if(cursorStyle == 'pointer' && !cursorElement.pointer) {
+        cursorElement.animate(
+            [
+                {scale: '2.5'},
+            ],
+            {
+                duration: 250,
+                easing: "ease-in-out",
+                fill: 'forwards',
+            }
+        )
+        cursorElement.pointer = true
+    }else if(cursorStyle != 'pointer' && cursorElement.pointer){
+        cursorElement.animate(
+            [
+                {scale: '1'},
+            ],
+            {
+                duration: 250,
+                easing: "ease-in-out",
+                fill: 'forwards',
+            }
+        )
+        cursorElement.pointer = false
+    }
 })
 
 navIconElement.addEventListener('click', () => {
@@ -69,4 +97,41 @@ typeElements.forEach(typeElement => {
     }
     setTimeout(typeTimeout, delay)
 
+})
+
+const scrollTopElement = document.querySelector('#scroll-top')
+
+scrollTopElement.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}))
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > window.innerHeight/2 && !scrollTopElement.displaying) {
+        scrollTopElement.style.display = 'block'
+        scrollTopElement.animate(
+            [
+                {translate: '0 100%', opacity: '0'},
+                {translate: '0', opacity: '.25'},
+            ],
+            {
+                duration: 500,
+                easing: "ease-in-out",
+                fill: 'forwards',
+            }
+        )
+        scrollTopElement.displaying = true
+    }else if(window.scrollY < window.innerHeight/2 && scrollTopElement.displaying){
+        const scrollTopElementHideAnimation = scrollTopElement.animate(
+            [
+                {translate: '0 100%', opacity: '0'},
+            ],
+            {
+                duration: 500,
+                easing: "ease-in-out",
+                fill: 'forwards',
+            }
+        )
+        scrollTopElementHideAnimation.onfinish = () => {
+            scrollTopElement.style.display = "none";
+        }
+        scrollTopElement.displaying = false
+    }
 })
