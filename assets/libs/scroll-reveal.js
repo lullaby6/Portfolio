@@ -1,6 +1,6 @@
-const scrollRevealElements = document.querySelectorAll('.scroll-reveal')
+const scrollRevealElements = document.querySelectorAll('[scroll-reveal]')
 
-const observer = new IntersectionObserver(entries =>
+const scrollRevealObserver = new IntersectionObserver(entries =>
     entries.forEach(entry => {
         const element = entry.target
 
@@ -9,15 +9,11 @@ const observer = new IntersectionObserver(entries =>
                 let startAnimation = {}
                 let endAnimation =  {translate: 0}
 
-                const direction = element.getAttribute('direction') || 'top'
-                const easing = element.getAttribute('easing') || 'ease-in-out'
-                const duration = Number(element.getAttribute('duration')) || 1000
-                const distance = Number(element.getAttribute('distance')) || 100
-                if(element.hasAttribute('fade')) {
-                    startAnimation.opacity = 0
-                    endAnimation.opacity = 1
-                }
-                if(element.hasAttribute('onetime')) element.scrollReveal = true
+                const direction = element.getAttribute('scroll-reveal-direction') || 'top'
+                const easing = element.getAttribute('scroll-reveal-easing') || 'ease-in-out'
+                const duration = Number(element.getAttribute('scroll-reveal-duration')) || 1000
+                const distance = Number(element.getAttribute('scroll-reveal-distance')) || 100
+                if(element.hasAttribute('scroll-reveal-onetime')) element.scrollReveal = true
 
                 switch (direction) {
                     case 'bottom':
@@ -46,9 +42,8 @@ const observer = new IntersectionObserver(entries =>
             }
         }else{
             if(!element.scrollReveal){
-                const direction = element.getAttribute('direction') || 'top'
-                const distance = Number(element.getAttribute('distance')) || 100
-                if(element.hasAttribute('fade')) element.style.opacity = 0
+                const direction = element.getAttribute('scroll-reveal-direction') || 'top'
+                const distance = Number(element.getAttribute('scroll-reveal-distance')) || 100
 
                 switch (direction) {
                     case 'bottom':
@@ -70,11 +65,10 @@ const observer = new IntersectionObserver(entries =>
 )
 
 scrollRevealElements.forEach(element => {
-    observer.observe(element)
+    scrollRevealObserver.observe(element)
 
-    const direction = element.getAttribute('direction') || 'top'
-    const distance = Number(element.getAttribute('distance')) || 100
-    if(element.hasAttribute('fade')) element.style.opacity = 0
+    const direction = element.getAttribute('scroll-reveal-direction') || 'top'
+    const distance = Number(element.getAttribute('scroll-reveal-distance')) || 100
 
     switch (direction) {
         case 'bottom':
