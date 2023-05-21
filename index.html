@@ -9,6 +9,9 @@
     <script src="./assets/libs/iconify-icon.min.js" defer></script>
     <script src="./assets/libs/scroll-fade.js" defer></script>
     <script src="./assets/libs/scroll-reveal.js" defer></script>
+    <script src="./assets/libs/scroll-to.js" defer></script>
+    <script src="./assets/libs/option-button.js" defer></script>
+    <script src="./assets/libs/glassmorphism.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
@@ -23,12 +26,12 @@
                 i am looking for a web dev job.
             </p>
             <div id="button">
-                <button>
+                <button class="button" scroll-to="#projects">
                     <p>Let's see my projects!</p>
                 </button>
-                <button>
-                    <p>CV</p><iconify-icon icon="gg:loadbar-doc"></iconify-icon>
-                </button>
+                <a href="https://goo.su/ba1jU6" target="_blank" class="button">
+                    <p>CV</p><iconify-icon icon="gg:loadbar-doc" class="icon"></iconify-icon>
+                </a>
             </div>
         </div>
     </section>
@@ -36,9 +39,9 @@
         <h2 scroll-fade scroll-fade-onetime>Projects</h2>
 
         <ul>
-            <li class="selected">Front-end</li>
-            <li>Back-end</li>
-            <li>Desktop Apps</li>
+            <li option-button option-button-selected>Front-end</li>
+            <li option-button>Back-end</li>
+            <li option-button>Desktop Apps</li>
         </ul>
     </section>
     <section>
@@ -47,8 +50,10 @@
     <section>
         <h2 scroll-fade scroll-fade-onetime>Contact</h2>
     </section>
-    <footer scroll-reveal >
-        <div id="circle"></div>
+    <footer>
+        <div id="circle">
+            <iconify-icon scroll-to="#hero" icon="clarity:arrow-line" class="icon" width="50"></iconify-icon>
+        </div>
     </footer>
 </body>
 </html>
