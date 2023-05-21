@@ -11,12 +11,20 @@
     <script src="./assets/libs/scroll-reveal.js" defer></script>
     <script src="./assets/libs/scroll-to.js" defer></script>
     <script src="./assets/libs/option-button.js" defer></script>
-    <script src="./assets/libs/glassmorphism.js" defer></script>
+    <script src="./assets/libs/scroll-nav.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
 </head>
 <body>
+    <header scroll-fade scroll-fade-onetime scroll-fade-duration="1500">
+        <nav scroll-nav>
+            <a scroll-to="#hero">Home</a>
+            <a scroll-to="#projects">Projects</a>
+            <a scroll-to="#skills">Skills</a>
+            <a scroll-to="#contact">Contact</a>
+        </nav>
+    </header>
     <div id="bg"></div>
     <section id="hero">
         <div scroll-fade scroll-fade-onetime scroll-fade-duration="1500" class="title-c">
@@ -34,26 +42,25 @@
                 </a>
             </div>
         </div>
+        <p></p>
     </section>
     <section id="projects">
         <h2 scroll-fade scroll-fade-onetime>Projects</h2>
-
         <ul>
             <li option-button option-button-selected>Front-end</li>
             <li option-button>Back-end</li>
             <li option-button>Desktop Apps</li>
         </ul>
     </section>
-    <section>
-        <h2 scroll-fade scroll-fade-onetime>Skills</h2>
+    <section id="skills">
+        <h2 scroll-fade scroll-fade-onetime>Skills & Education</h2>
     </section>
-    <section>
+    <section id="contact">
         <h2 scroll-fade scroll-fade-onetime>Contact</h2>
     </section>
     <footer>
-        <div id="circle">
-            <iconify-icon scroll-to="#hero" icon="clarity:arrow-line" class="icon" width="50"></iconify-icon>
-        </div>
+        <div id="circle"></div>
+        <iconify-icon scroll-to="#hero" icon="clarity:arrow-line" class="icon" width="50"></iconify-icon>
     </footer>
 </body>
 </html>
