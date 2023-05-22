@@ -20,7 +20,7 @@
     <header scroll-fade scroll-fade-onetime scroll-fade-duration="1500">
         <nav scroll-nav>
             <a scroll-to="#hero">Home</a>
-            <a scroll-to="#projects">Projects</a>
+            <a href="#projects">Projects</a>
             <a scroll-to="#skills">Skills</a>
             <a scroll-to="#contact">Contact</a>
         </nav>
@@ -28,14 +28,14 @@
     <div id="bg"></div>
     <section id="hero">
         <div scroll-fade scroll-fade-onetime scroll-fade-duration="1500" class="title-c">
-            <h1>A Softawre Developer.</h1>
+            <h1>A Software Developer.</h1>
             <p>
                 Hello! I am Luciano Brumer, a passinate software developer and <br/>
                 i am looking for a web dev job.
             </p>
             <div id="button">
-                <button class="button" scroll-to="#projects">
-                    <p>Let's see my projects!</p>
+                <button class="button">
+                    <a href="#projects">Let's see my projects!</a>
                 </button>
                 <a href="https://goo.su/ba1jU6" target="_blank" class="button">
                     <p>CV</p><iconify-icon icon="gg:loadbar-doc" class="icon"></iconify-icon>
@@ -46,11 +46,65 @@
     </section>
     <section id="projects">
         <h2 scroll-fade scroll-fade-onetime>Projects</h2>
-        <ul>
-            <li option-button option-button-selected>Front-end</li>
+        <ul class="nav">
+            <li option-button option-button-selected>All</li>
+            <li option-button>Front-end</li>
             <li option-button>Back-end</li>
             <li option-button>Desktop Apps</li>
         </ul>
+        <div class="project">
+            <div class="info">
+                <div class="title">
+                    <h3>Noty</h3>
+                    <p>A notes web app inspired in Google Keep but with feactures that I would like it to have.</p>
+                </div>
+                <ul class="used">
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>Tailwind</li>
+                    <li>React.js</li>
+                </ul>
+            </div>
+            <div class="img">
+                <div class="overlay"></div>
+                <img src="./assets/images/noty.png" alt="">
+            </div>
+        </div>
+        <div class="project">
+            <div class="info">
+                <div class="title">
+                    <h3>Starsbit</h3>
+                    <p>A multiplayer online game like agar.io using Web Sockets.</p>
+                </div>
+                <ul class="used">
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>Express.js</li>
+                    <li>Socket.io</li>
+                </ul>
+            </div>
+            <div class="img">
+                <div class="overlay"></div>
+                <img src="./assets/images/starsbit.png" alt="">
+            </div>
+        </div>
+        <div class="project">
+            <div class="info">
+                <div class="title">
+                    <h3>Speed Coder</h3>
+                    <p>A mini-game to practice the words used in programming and to help with muscle memory, inspired in monkeytype.com but with coding words and calculating letters per second instead of words per second.</p>
+                </div>
+                <ul class="used">
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <div class="img">
+                <div class="overlay"></div>
+                <img src="./assets/images/speed_coder.png" alt="">
+            </div>
+        </div>
     </section>
     <section id="skills">
         <h2 scroll-fade scroll-fade-onetime>Skills & Education</h2>

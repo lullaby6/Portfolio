@@ -7,6 +7,11 @@
     --location:rgb(212, 71, 71, 0.75);
     --black: #2f2e30;
     --shadow: rgba(0, 0, 0, .1);
+    --w-shadow: rgba(255, 255, 255, .1);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -86,7 +91,9 @@ header nav {
 
 header nav a{
     opacity: .2;
+    color: var(--white);
     text-transform: lowercase;
+    text-decoration: none;
     transition: opacity .3s ease-in-out;
     -webkit-transition: opacity .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out;
@@ -100,7 +107,7 @@ header nav a:hover {
 
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
     color: var(--white);
 
@@ -192,6 +199,20 @@ section h2::before {
     text-decoration: none;
 }
 
+#hero #button {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 10px;
+    margin-top: 5px;
+
+    /* justify-content: center; */
+}
+
+#hero .button a{
+    color: var(--text);
+    text-decoration: none;
+}
+
 #hero .button::after {
     content: '';
     background-color: var(--white);
@@ -231,14 +252,14 @@ section h2::before {
     /* justify-content: center; */
 }
 
-#projects ul {
+#projects .nav {
     text-decoration: none;
     list-style: none;
     display: flex;
     gap: 25px;
 }
 
-#projects li {
+#projects .nav li {
     cursor: pointer;
     padding: 5px 20px;
     border-radius: 2.5px;
@@ -259,6 +280,105 @@ section h2::before {
 
 #projects li:hover {
     background-color: var(--shadow);
+}
+
+
+
+.project {
+    background-color: var(--shadow);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+    gap: 12.5px;
+
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+.info {
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    flex-direction: column;
+
+    padding: 25px;
+    gap: 12.5px;
+
+    width: 50%;
+
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+.project .title{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project .img {
+    width: 50%;
+    cursor: pointer;
+    box-shadow: 10px 5px var(--shadow);
+    background-color: var(--shadow);
+}
+
+.project .img:hover {
+    background-color: var(--shadow);
+}
+
+.project .img img{
+    width: 100%;
+    height: 100;
+    overflow: hidden;
+}
+
+
+.project .title h3{
+    font-size: 37.5px;
+    cursor: pointer;
+    text-shadow: 5px 5px var(--shadow);
+}
+
+.project .title p{
+    font-size: 17.5;
+}
+
+.project ul{
+    display: flex;
+    /* justify-content: center; */
+    text-decoration: none;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project li{
+    background-color: var(--shadow);
+    padding: 5px 20px;
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+    font-size: 15px;
+    box-shadow: 5px 5px var(--w-shadow);
 }
 
 footer {
