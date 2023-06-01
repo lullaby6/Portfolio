@@ -12,6 +12,8 @@
     <script src="./assets/libs/scroll-to.js" defer></script>
     <script src="./assets/libs/option-button.js" defer></script>
     <script src="./assets/libs/scroll-nav.js" defer></script>
+    <script src="./assets/libs/click-redirect.js" defer></script>
+    <script src="./assets/libs/form-extra.js" defer></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
@@ -46,31 +48,31 @@
     </section>
     <section id="projects">
         <h2 scroll-fade scroll-fade-onetime>Projects</h2>
-        <ul class="nav">
+        <ul class="nav" scroll-fade scroll-fade-onetime>
             <li option-button option-button-selected>All</li>
             <li option-button>Front-end</li>
             <li option-button>Back-end</li>
             <li option-button>Desktop Apps</li>
         </ul>
-        <div class="project">
+        <div class="project front-end" scroll-fade scroll-fade-onetime>
             <div class="info">
                 <div class="title">
                     <h3>Noty</h3>
-                    <p>A notes web app inspired in Google Keep but with feactures that I would like it to have.</p>
+                    <p>A notes web app inspired in "Google Keep".</p>
                 </div>
                 <ul class="used">
                     <li>HTML</li>
                     <li>JavaScript</li>
                     <li>Tailwind</li>
-                    <li>React.js</li>
+                    <li>Svelte.js</li>
                 </ul>
             </div>
-            <div class="img">
+            <a href="https://noty-lullaby.vercel.app" target="_blank" class="img">
                 <div class="overlay"></div>
-                <img src="./assets/images/noty.png" alt="">
-            </div>
+                <img src="./assets/images/noty-dark.png" alt="">
+            </a>
         </div>
-        <div class="project">
+        <div class="project front-end back-end" scroll-fade scroll-fade-onetime>
             <div class="info">
                 <div class="title">
                     <h3>Starsbit</h3>
@@ -83,12 +85,12 @@
                     <li>Socket.io</li>
                 </ul>
             </div>
-            <div class="img">
+            <a href="https://www.starsbit.ga" target="_blank" class="img">
                 <div class="overlay"></div>
                 <img src="./assets/images/starsbit.png" alt="">
-            </div>
+            </a>
         </div>
-        <div class="project">
+        <div class="project front-end" scroll-fade scroll-fade-onetime>
             <div class="info">
                 <div class="title">
                     <h3>Speed Coder</h3>
@@ -100,10 +102,42 @@
                     <li>CSS</li>
                 </ul>
             </div>
-            <div class="img">
+            <a href="https://lullaby6.github.io/Speed-Coder/" target="_blank" class="img">
                 <div class="overlay"></div>
                 <img src="./assets/images/speed_coder.png" alt="">
+            </a>
+        </div>
+        <div class="project desktop-apps" scroll-fade scroll-fade-onetime>
+            <div class="info">
+                <div class="title">
+                    <h3>Windows Explorer Toggle</h3>
+                    <p>Desktop App for Windows to disable explorer process to get more performance in the computer.</p>
+                </div>
+                <ul class="used">
+                    <li>C#</li>
+                </ul>
             </div>
+            <a href="https://lullaby6.github.io/Windows-Explorer-Toggle/" target="_blank" class="img">
+                <div class="overlay"></div>
+                <img src="./assets/images/windows-explorer-toggle.png" alt="">
+            </a>
+        </div>
+        <div class="project back-end" scroll-fade scroll-fade-onetime>
+            <div class="info">
+                <div class="title">
+                    <h3>express-dir-routing</h3>
+                    <p>NPM Package - Directory routing system for express.js inspired in routing system from Next.js and SvelteKit.</p>
+                </div>
+                <ul class="used">
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                </ul>
+            </div>
+            <a href="https://www.npmjs.com/package/express-dir-routing" target="_blank" class="img">
+                <div class="overlay"></div>
+                <img src="./assets/images/express-dir-router.png" alt="">
+            </a>
         </div>
     </section>
     <section id="skills">
@@ -111,10 +145,21 @@
     </section>
     <section id="contact">
         <h2 scroll-fade scroll-fade-onetime>Contact</h2>
+        <form disabled>
+            <input type="text" spellcheck="false" required autocomplete="false" placeholder="Name" class="input">
+            <input type="email" spellcheck="false" required autocomplete="false" placeholder="Email" class="input">
+            <textarea name="" id="" spellcheck="false" required cols="30" rows="10" placeholder="Your message" class="input"></textarea>
+            <input type="submit" class="input button" value="Send message">
+        </form>
     </section>
     <footer>
         <div id="circle"></div>
         <iconify-icon scroll-to="#hero" icon="clarity:arrow-line" class="icon" width="50"></iconify-icon>
+        <div class="social">
+            <iconify-icon click-redirect="https://github.com/lullaby6" class="social-icon" width="25" icon="ri:github-line"></iconify-icon>
+            <iconify-icon click-redirect="https://www.linkedin.com/in/luciano-brumer/" class="social-icon" width="25" icon="ri:linkedin-fill"></iconify-icon>
+            <iconify-icon click-redirect="https://codepen.io/lucianobrumer" class="social-icon" width="25" icon="ri:codepen-fill"></iconify-icon>
+        </div>
     </footer>
 </body>
 </html>

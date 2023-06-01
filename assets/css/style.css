@@ -313,7 +313,7 @@ section h2::before {
     flex-direction: column;
 
     padding: 25px;
-    gap: 12.5px;
+    gap: 15px;
 
     width: 50%;
 
@@ -329,7 +329,32 @@ section h2::before {
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+}
+
+.project .img {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .img .overlay{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.project .img:hover > img {
+    scale: 1.05;
+}
+
+.project .img:hover > .overlay {
+    opacity: .25;
 }
 
 .project .img {
@@ -339,14 +364,11 @@ section h2::before {
     background-color: var(--shadow);
 }
 
-.project .img:hover {
-    background-color: var(--shadow);
-}
-
 .project .img img{
     width: 100%;
     height: 100;
     overflow: hidden;
+    transition: scale .3s ease-in-out;
 }
 
 
@@ -381,6 +403,66 @@ section h2::before {
     box-shadow: 5px 5px var(--w-shadow);
 }
 
+#contact {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* padding: 0 100px; */
+    /* translate: -100px 0; */
+}
+
+#contact form .input  {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    box-shadow: 5px 5px var(--shadow);
+    padding: 10px;
+    font-size: 20px;
+    resize: none;
+}
+
+#contact form .input::placeholder  {
+    color: var(--white);
+    opacity: .5;
+}
+
+#contact form .input:focus {
+    outline: none;
+}
+
+#contact form .button {
+    cursor: pointer;
+    text-align: center;
+    color: var(--bg-bottom);
+    background-color: var(--white);
+}
+
+@keyframes shake-button {
+    0% {
+        translate: 0 0;
+    }
+    33% {
+        translate: 2.5px 0;
+    }
+    66% {
+        translate: -2.5px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+#contact form .button:hover {
+    animation: shake-button .5s ease-in-out 0s infinite;
+}
+
+
 footer {
     height: 50vh;
     overflow: hidden;
@@ -409,6 +491,7 @@ footer .icon {
     cursor: pointer;
     z-index: 10;
     position: absolute;
+    translate: 0 -50px;
 }
 
 .icon {
@@ -439,4 +522,23 @@ footer .icon::after {
 
 footer .icon:hover::after {
     scale: 2;
+}
+
+footer .social {
+    translate: 0 100px;
+    display: flex;
+    gap: 25px;
+}
+
+footer .social .social-icon {
+    color: var(--white);
+    background-color: var(--shadow);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: scale .3s ease-in-out;
+}
+
+footer .social .social-icon:hover {
+    scale: 1.125;
 }
