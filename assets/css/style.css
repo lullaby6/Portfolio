@@ -485,9 +485,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 75px;
 }
 
 footer #circle {
+    position: absolute;
     background-color: rgb(46, 45, 47, .125);
     width: 100%;
     aspect-ratio: 1/1;
@@ -504,8 +507,9 @@ footer #circle {
 footer .icon {
     cursor: pointer;
     z-index: 10;
-    position: absolute;
-    translate: 0 -50px;
+    position: relative;
+    /* position: absolute; */
+    /* translate: 0 -50px; */
 }
 
 .icon {
@@ -539,7 +543,7 @@ footer .icon:hover::after {
 }
 
 footer .social {
-    translate: 0 100px;
+    /* translate: 0 100px; */
     display: flex;
     gap: 25px;
 }
@@ -550,7 +554,8 @@ footer .social .social-icon {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: scale .3s ease-in-out;
+    scale: 1;
+    transition: scale .2s ease-in-out;
 }
 
 footer .social .social-icon:hover {
