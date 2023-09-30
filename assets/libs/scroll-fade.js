@@ -1,6 +1,6 @@
 const scrollFadeElements = document.querySelectorAll('[scroll-fade]')
 
-function secrollFadeAnimation(element){
+function scrollFadeAnimation(element){
     const easing = element.getAttribute('scroll-fade-easing') || 'ease-in-out'
     const duration = Number(element.getAttribute('scroll-fade-duration')) || 1000
     if(element.hasAttribute('scroll-fade-onetime')) element.scrollFade = true
@@ -22,7 +22,7 @@ const scrollFadeobserver = new IntersectionObserver(entries =>
 
         if(entry.isIntersecting){
             if(!element.scrollFade){
-                secrollFadeAnimation(element)
+                scrollFadeAnimation(element)
             }
         }else if(!element.scrollFade) element.style.opacity = 0
     })

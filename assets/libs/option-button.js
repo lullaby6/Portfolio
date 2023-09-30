@@ -9,9 +9,15 @@ optionButtonElements.forEach(optionButtonElement => {
         const projectElements = optionButtonElement.parentNode.parentNode.querySelectorAll('.project')
 
         projectElements.forEach(projectElement => {
-            if(!projectElement.oldDisplay)projectElement.oldDisplay = getComputedStyle(projectElement).display
-            projectElement.style.display = projectElement.oldDisplay
-            secrollFadeAnimation(projectElement)
+            if(!projectElement.defaultDisplay) projectElement.defaultDisplay = getComputedStyle(projectElement).display
+            projectElement.style.display = projectElement.defaultDisplay
+            // if(getComputedStyle(projectElement).display == 'none'){
+            //     scrollFadeAnimation(projectElement)
+            // }
+            // if(projectElement.classList.contains(selection)) scrollFadeAnimation(projectElement)
+            // if(selection == 'all')
+            projectElement.setAttribute('scroll-fade-duration', 500)
+            scrollFadeAnimation(projectElement)
             if(selection != 'all' && !projectElement.classList.contains(selection)) projectElement.style.display = 'none'
         })
     })
